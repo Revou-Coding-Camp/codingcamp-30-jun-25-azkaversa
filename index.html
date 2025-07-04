@@ -3,9 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        /* Our Headquarter Section */
+        .headquarter-section {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .headquarter-section h2 {
+            margin-top: 0;
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .cities-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .city-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .city-circle {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .city-item p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 0;
+        }
+
+        /* Message Us Section */
+        .message-us-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            padding: 40px 20px; /* Adjust padding to match headquarter section */
+        }
+
+        .message-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .message-form h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .message-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .message-form input[type="text"],
+        .message-form input[type="date"],
+        .message-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .message-form input[type="date"] {
+            padding-right: 35px;
+        }
+
+        .message-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .message-form .radio-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .message-form .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .message-form .radio-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        .message-form button {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 12px 25px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .message-form button:hover {
+            background-color: #d0d0d0;
+        }
+
+        .message-details-box {
+            flex: 1;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            min-width: 300px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            height: fit-content;
+        }
+
+        .message-details-box p {
+            margin: 8px 0;
+        }
+
+        .message-details-box strong {
+            display: inline-block;
+            width: 110px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .footer {
+            margin-top: auto;
+            text-align: right;
+            padding: 15px 20px;
+            font-size: 0.85em;
+            color: #777;
+            border-top: 1px solid #eee;
+            background-color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .cities-container {
+                gap: 30px;
+            }
+            .city-circle {
+                width: 100px;
+                height: 100px;
+            }
+            .headquarter-section {
+                padding: 30px 15px;
+            }
+            .headquarter-section h2 {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+
+            .message-us-section {
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px 15px;
+            }
+            .message-form, .message-details-box {
+                min-width: unset;
+                width: 100%;
+            }
+            .main-wrapper {
+                width: 95%;
+                margin: 20px auto;
+            }
+        }
+    </style>
 </head>
+
 <body>
     
+    <h1>Hi, Welcome to my first website</h1>
+
+    <img src="IMG_7215.JPG">
+
+    <hr>
+   <div class="main-wrapper">
+        <section class="headquarter-section">
+            <h2>Our Headquarter</h2>
+            <div class="cities-container">
+                <div class="city-item">
+                    <div class="city-circle"></div>
+                    <p>Jakarta</p>
+                </div>
+                <div class="city-item">
+                    <div class="city-circle"></div>
+                    <p>Bandung</p>
+                </div>
+                <div class="city-item">
+                    <div class="city-circle"></div>
+                    <p>Surabaya</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="message-us-section">
+            <div class="message-form">
+                <h2>Message Us</h2>
+                <form id="contactForm">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Nama">
+
+                    <label for="dob">Tanggal Lahir</label>
+                    <input type="date" id="dob" name="dob" value="2023-04-02">
+
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="Laki-Laki" checked>
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" id="female" name="gender" value="Perempuan">
+                        <label for="female">Perempuan</label>
+                    </div>
+
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Pesan"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="message-details-box">
+                <p><strong>Current time:</strong> <span id="currentTime"></span></p>
+                <p><strong>Nama:</strong> <span id="outputName"></span></p>
+                <p><strong>Tanggal Lahir:</strong> <span id="outputDob"></span></p>
+                <p><strong>Jenis Kelamin:</strong> <span id="outputGender"></span></p>
+                <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Created By Azka
+    </footer>
 </body>
 </html>
